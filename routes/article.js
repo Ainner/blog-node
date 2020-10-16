@@ -20,6 +20,7 @@ exports.addArticle = (req, res) => {
     type,
     origin,
   } = req.body;
+  console.log(req.body);
   let tempArticle = null;
   if (img_url) {
     tempArticle = new Article({
@@ -184,6 +185,7 @@ exports.getArticleList = (req, res) => {
       // 待返回的字段
       let fields = {
         title: 1,
+        content: 1,
         desc: 1,
         img_url: 1,
         tags: 1,
